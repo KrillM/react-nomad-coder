@@ -1,8 +1,10 @@
-import A_state from "./01_basic/A_state";
+import A_state from "./01_state/A_state";
+import B_state from "./01_state/B_state";
 
 function App() {
   return (
-    <A_state />
+    // <A_state />
+    <B_state/>
   );
 }
 
