@@ -1,0 +1,27 @@
+import { useState } from "react";
+import A_props_b from "./A_props_b";
+import A_props_c from "./A_props_c";
+
+export default function A_props_a (){
+    const [num, setNum] = useState(0);
+    const add = "add"
+    const min = "min"
+
+    // 부모에서 상태를 관리하므로 원래 사용하는 함수는 그대로 둠
+    function addNum () {
+        setNum(num+1)
+    }
+
+    function removeNum () {
+        setNum(num-1)
+    }
+
+    return(
+        <>  
+            <span>Total Count : {num}</span>
+            <br/>
+            <A_props_c numberValue={addNum} value={add}/>
+            <A_props_c numberValue={removeNum} value={min}/>            
+        </>
+    )
+} 
